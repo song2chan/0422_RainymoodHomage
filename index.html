@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>힘찬 나팔소리</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="contents">
+      <div id="songPlayer">
+        <button id="player" class="play" onclick="playAudio();"></button>
+        <div id="volume-controller">
+          <input type="range" oninput="setVolume(this.value)" onchange="setVolume(this.value)" min="0" max="1" step="0.01" value="1">
+        </div>
+      </div>
+      <h1>누르면 나팔소리가 나와요</h1>
+      <h2>즐거운 나팔소리와 함께 <u>상쾌한</u> 아침을 맞이하세요^^</h2>
+    </div>
+    <audio id="audioPlayer" loop="loop">
+      <source src="군대+기상나팔.mp3" type="audio/mp3">
+    </audio>
+    <script>
+      /*버튼을 눌렀을 때 버튼 클래스 명을 스왑해 css의 class명에 따른 background 이미지 변경 적용*/
+      var music = document.getElementById('audioPlayer');
+      function playAudio() {
+        if (music.paused) {
+          music.play();
+          player.className = "";
+          player.className = "pause";
+        }
+        else {
+          music.pause();
+          player.className = "";
+          player.className = "play";
+        }
+      }
+      function setVolume(volume) {
+        music.volume = volume;
+      }
+    </script>
+  </body>
+</html>

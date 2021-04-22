@@ -1,0 +1,39 @@
+#contents {
+  margin-top: 200px;
+  text-align: center;
+}
+
+#player {
+  height: 130px;
+  width: 130px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+.play {
+  background: url("play4.png");
+}
+.pause {
+  background: url("pause4.png");
+}
+
+body {
+  background: url('57db5f293fe9f750416258d8.jpg') no-repeat;
+  border: 0;
+  padding: 0;
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+h1, h2 {
+  color: red;
+  font-style: italic;
+}
+
+u {
+  color: blue;
+}
